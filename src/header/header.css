@@ -1,0 +1,20 @@
+#contact-dropdown-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+}
+#contact-dropdown-social-logos{
+    height: 30px;
+    width: 30px
+}
+#navbar-dropdown-arrows{
+    height: 20px;
+    width: 20px;
+}
+#navbar-main-arrows{
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    
+}
