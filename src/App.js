@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './header/header';
-import { Routes } from 'react-router';
+import ProjectPage from './projectPage/projectPage.js';
+import { Route, Routes } from 'react-router';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <main>
         
         <Routes>
-          {/* <Route path="/" element={<ProjectPage/>}/> */}
+          <Route path="/" element={<ProjectPage/>}/>
 
         </Routes>
       </main>

@@ -1,0 +1,37 @@
+.bio-wrapper{
+    background-color: black;
+    color: white;
+    font-size: 36px;
+    padding: 25px;
+   
+    text-align: left;
+}
+.portfolio-wrapper{
+    background-color: #F0F2F4;
+    font-size: 14px;
+    padding: 25px;
+    text-align: left;
+    
+}
+div.card-title.h5{
+    font-size: 24px;
+    font-weight: 380;
+}
+p.card-text{
+    font-size: 18;
+}
+button.btn.btn-primary{
+    margin-bottom: 10px;
+    height: 55px;
+    width: 183px;
+    font-size: large;
+}
+button.btn.btn-secondary{
+    margin-bottom: 10px;
+    height: 55px;
+    width: 111px;
+    background-color: #F0F2F4;
+    color: black;
+    border: none;
+    font-weight: 600;
+}
