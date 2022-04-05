@@ -26,7 +26,7 @@ export default function Header() {
             <Nav className="me-auto">
                 {/* portfoolio dropdown */}
               <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown" >
-                <NavDropdown.Item href="#action/3.1" id="contact-dropdown-items">
+                <NavDropdown.Item href="/" id="contact-dropdown-items">
                  <h5>Scanberry</h5> 
                   <BsArrowRight id="navbar-dropdown-arrows"/>
 
@@ -47,7 +47,7 @@ export default function Header() {
 
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link ><h5 style={{fontSize:"20", fontWeight: "350"}}>About</h5></Nav.Link>
+              <Nav.Link href="#/about"><h5 style={{fontSize:"20", fontWeight: "350"}}>About</h5></Nav.Link>
               {/* contact dropdown */}
               <NavDropdown title="CONTACT" id="basic-nav-dropdown">
                 <NavDropdown.Item
