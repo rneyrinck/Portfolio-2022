@@ -1,0 +1,7 @@
+#carousel{
+    /* height: 500px; */
+    width: 300px;
+    display: flex;
+    align-self: center;
+    color: black;
+}

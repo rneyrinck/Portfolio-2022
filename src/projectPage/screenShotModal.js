@@ -1,7 +1,9 @@
 import React, { Component, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { BsArrowRight } from "react-icons/bs";
+import ModalSlideShow from "./modalSlideShow";
 
-export default ScreenShotModal = () => {
+const ScreenShotModal = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -9,23 +11,26 @@ export default ScreenShotModal = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      Screen Shots <BsArrowRight id="navbar-dropdown-arrows" />
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Scanberry Screen Shots</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body style={{display: "flex", justifyContent:"center"}}>
+
+        <ModalSlideShow />
+
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
+         
         </Modal.Footer>
       </Modal>
     </>
   );
 };
+export default ScreenShotModal

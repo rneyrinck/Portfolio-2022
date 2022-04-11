@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { BsArrowRight } from "react-icons/bs";
-import SimpleModal from "react-modal-slideshow/src/SimpleModal";
+
 import { Link } from "react-router-dom";
 import "./projectPage.css";
 import ScreenShotModal from "./screenShotModal";
@@ -38,10 +38,8 @@ export default function ProjectPage() {
               visualization. Built in 5 days after collaborative handoff with UX
               Designer.
             </Card.Text>
-            <SimpleModal/>
-            <Button variant="primary" onClick={ScreenShotModal}>
-              Screen Shots <BsArrowRight id="navbar-dropdown-arrows" />
-            </Button>
+            <ScreenShotModal/>
+            
             <a href="https://github.com/rneyrinck/Scanberry" target="_blank">
               <Button variant="secondary">
                 Repo <BsArrowRight id="navbar-dropdown-arrows" />
