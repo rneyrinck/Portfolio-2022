@@ -106,7 +106,7 @@ export default function ProjectPage() {
               href="https://github.com/rneyrinck/CookbookerClient"
               target="_blank"
             >
-              <Button variant="secondary">
+              <Button variant="secondary" id="repo-button-cookbooker">
                 Repo Frontend
                 <BsArrowRight id="navbar-dropdown-arrows" />
               </Button>
@@ -115,7 +115,7 @@ export default function ProjectPage() {
               href="https://github.com/rneyrinck/CookBookerAPI"
               target="_blank"
             >
-              <Button variant="secondary">
+              <Button variant="secondary" id="repo-button-cookbooker">
                 Repo Backend
                 <BsArrowRight id="navbar-dropdown-arrows" />
               </Button>

@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
+    min-width: 300px;
 }
 #contact-dropdown-social-logos{
     height: 30px;

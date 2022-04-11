@@ -17,15 +17,15 @@ import { BsArrowRight } from "react-icons/bs";
 import "./header.css";
 export default function Header() {
   return (
-    <header>
-      <Navbar bg="dark" expand="lg" variant="dark">
+    // <header>
+      <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark" >
         <Container>
-          <Navbar.Brand href="#home">Robert Neyrinck</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Brand href="#/">Robert Neyrinck</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
             <Nav className="me-auto">
                 {/* portfoolio dropdown */}
-              <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown" >
+              <NavDropdown title="PORTFOLIO" id="responsive-nav-dropdown" >
                 <NavDropdown.Item href="/" id="contact-dropdown-items">
                  <h5>Scanberry</h5> 
                   <BsArrowRight id="navbar-dropdown-arrows"/>
@@ -47,7 +47,7 @@ export default function Header() {
 
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#/about"><h5 style={{fontSize:"20", fontWeight: "350"}}>About</h5></Nav.Link>
+              <Nav.Link href="#/about"><h5 style={{fontSize: 16, fontWeight: "420", marginTop: 5}}>ABOUT</h5></Nav.Link>
               {/* contact dropdown */}
               <NavDropdown title="CONTACT" id="basic-nav-dropdown">
                 <NavDropdown.Item
@@ -59,7 +59,8 @@ export default function Header() {
                   <BsArrowRight id="navbar-dropdown-arrows"/>
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                  href="#action/3.2"
+                  href="https://www.linkedin.com/in/robert-neyrinck-5933a0104/"
+                  target="_blank"
                   id="contact-dropdown-items"
                 >
                   <AiFillLinkedin id="contact-dropdown-social-logos" />
@@ -78,6 +79,6 @@ export default function Header() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </header>
+    // </header>
   );
 }

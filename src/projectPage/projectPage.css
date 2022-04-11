@@ -35,3 +35,7 @@ button.btn.btn-secondary{
     border: none;
     font-weight: 600;
 }
+#repo-button-cookbooker{
+    width: fit-content;
+    text-decoration: none;
+}

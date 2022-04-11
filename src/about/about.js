@@ -23,36 +23,36 @@ export default function About() {
       </div>
       <div className="about-skills">
       <h6>Tools</h6>
-      <ul>
-        <li>Bash</li>
-        <li>Git and Github</li>
-        <li>CSS Grid & Flexbox </li>
-        <li>Responsive Web Design</li>
-        <li>Express.js</li>
-        <li>Node.js</li>
-        <li>Vue.js</li>
-        <li>Mongoose</li>
-        <li>MongoDB</li>
-        <li>Object Oriented Programming</li>
-        <li>DOM manipulation</li>
-        <li>AJAX</li>
-        <li>React</li>
-        <li>React Native</li>
-        <li>React Bootstrap</li>
-        <li>Bootstrap</li>
-        <li>React Components, Props, and State</li>
-        <li>React Hooks</li>
-        <li>PostgresQL</li>
-      </ul>
+      <p>
+        Bash<br/>
+        Git and Github<br/>
+        CSS Grid & Flexbox <br/>
+        Responsive Web Design<br/>
+        Express.js<br/>
+        Node.js<br/>
+        Vue.js<br/>
+        Mongoose<br/>
+        MongoDB<br/>
+        Object Oriented Programming<br/>
+        DOM manipulation<br/>
+        AJAX<br/>
+        React<br/>
+        React Native<br/>
+        React Bootstrap<br/>
+        Bootstrap<br/>
+        React Components, Props, and State<br/>
+        React Hooks<br/>
+        PostgresQL<br/>
+      </p>
       <h6>Languages</h6>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>Python</li>
-        <li>JSX</li>
-        <li>jQuery</li>
-      </ul>
+      <p>
+        HTML<br/>
+        CSS<br/>
+        Javascript<br/>
+        Python<br/>
+        JSX<br/>
+        jQuery<br/>
+      </p>
       </div>
       <div className="about-button-group">
       <Button href="https://www.linkedin.com/in/robert-neyrinck/" id="about-button-group-linkedIn-button" >
