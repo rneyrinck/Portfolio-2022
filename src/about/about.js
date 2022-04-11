@@ -6,11 +6,12 @@ import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 export default function About() {
   return (
-    <section>
+    <section className="about-main">
       <div className="about-wrapper">
         <h5>ABOUT</h5>
       </div>
       <img src={picture} className="pic-o-bob" />
+      <div className="about-bio">
       <h5>Robert Neyrinck</h5>
       <p>
         Full-stack developer with a knack for intuitive problem solving and
@@ -19,6 +20,8 @@ export default function About() {
         efficiently and effectively under pressure with a passion to overcome
         difficult obstacles and learn new languages.
       </p>
+      </div>
+      <div className="about-skills">
       <h6>Tools</h6>
       <ul>
         <li>Bash</li>
@@ -50,21 +53,24 @@ export default function About() {
         <li>JSX</li>
         <li>jQuery</li>
       </ul>
-      <Button href="#action/3.1" id="contact-dropdown-items">
-        <AiOutlineMail id="contact-dropdown-social-logos" />
-        <h5>Email</h5>
-        <BsArrowRight id="navbar-dropdown-arrows" />
-      </Button>
-      <Button href="#action/3.2" id="contact-dropdown-items">
+      </div>
+      <div className="about-button-group">
+      <Button href="https://www.linkedin.com/in/robert-neyrinck/" id="about-button-group-linkedIn-button" >
         <AiFillLinkedin id="contact-dropdown-social-logos" />
         <h5>LinkedIn</h5>
         <BsArrowRight id="navbar-dropdown-arrows" />
       </Button>
-      <Button href="#action/3.3" id="contact-dropdown-items">
+      <Button href="https://github.com/rneyrinck" target="_blank" id="about-button-group-buttons" >
         <AiFillGithub id="contact-dropdown-social-logos" />{" "}
         <h5>GitHub profile</h5>
         <BsArrowRight id="navbar-dropdown-arrows" />
       </Button>
+      <Button href="mailto:robert.a.neyrinck@gmail.com?subject=Robert Neyrinck's Portfolio" id="about-button-group-buttons" >
+        <AiOutlineMail id="contact-dropdown-social-logos" />
+        <h5>Email</h5>
+        <BsArrowRight id="navbar-dropdown-arrows" />
+      </Button>
+      </div>
     </section>
   );
 }
