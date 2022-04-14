@@ -31,7 +31,45 @@ export default function Header() {
     "text-color": "#000000",
     "dropdown-display": "none",
   });
-
+  // usesstates for visibility of embedded dropdown menus 'PORTFOLIO' & 'CONTACT'
+  const [isPortfolioDropdownVisible, setIsPortfolioDropdownVisible] =
+    useState(false);
+  const [isContactDropdownVisible, setIsContactDropdownVisible] =
+    useState(false);
+  // handlers for embedded dropdown visibility
+  const handlePortfolioDropdownVisible = () => {
+    setIsPortfolioDropdownVisible(!isPortfolioDropdownVisible);
+  };
+  const handleContactDropdownVisible = () => {
+    setIsContactDropdownVisible(!isContactDropdownVisible);
+  };
+  // usestate for functionality of embedded dropdowns
+  const [embeddedDropdownFunctionality, setEmbeddedDropdownFunctionality] =
+    useState({
+      "portfolio-display": "none",
+      "portfolio-icon-style": "carbon:chevron-up",
+      "contact-display": "none",
+      "contact-icon-style": "carbon:chevron-up",
+    });
+  // handler for opening or closing
+  const handlePortfolioDropdownClick = () => {
+    // set display state as opposite of what it currently is(default false)
+    handlePortfolioDropdownClick()
+    // copy current state to preserve if other dropdown is open
+    let stateCopy = [...embeddedDropdownFunctionality]
+    // if/else for changing visibility of specific dropdown
+     // open dropdown -> change background to gray and icon to close "X"
+     if (isPortfolioDropdownVisible === true) {
+      stateCopy["portfolio-display"]='initial'
+      stateCopy["portfolio-icon-style"]="carbon:chevron-down"
+    }
+    // close dropdown -> change background to white and icon to vertical ellipse
+    if (isPortfolioDropdownVisible === false) {
+      stateCopy["portfolio-display"]='none'
+      stateCopy["portfolio-icon-style"]="carbon:chevron-up"
+  };
+  setEmbeddedDropdownFunctionality(stateCopy)
+}
   // if/else function for changing background color when icon state is open -> called on menu icon click
   const handleMenuIconClick = () => {
     handleVisible();
@@ -84,7 +122,7 @@ export default function Header() {
           left: 0,
           top: "68px",
           width: "100%",
-          zIndex: 1020
+          zIndex: 1020,
         }}
       >
         {/* portfolio dropdown */}
@@ -103,7 +141,9 @@ export default function Header() {
           />
         </div>
         <div className="header-dropdown-portfolio-items">
-          <h3 className="header-dropdown-portfolio-items-h3">Galaxy trading cards</h3>{" "}
+          <h3 className="header-dropdown-portfolio-items-h3">
+            Galaxy trading cards
+          </h3>{" "}
           <Icon
             icon="carbon:arrow-right"
             style={{ width: "26px", height: "26px", margin: "0px 10px" }}
