@@ -29,7 +29,7 @@ export default function Header() {
     "background-color": "#f0f2f4",
     "icon-style": "carbon:overflow-menu-vertical",
     "text-color": "#000000",
-    "dropdown-display":"none"
+    "dropdown-display": "none",
   });
 
   // if/else function for changing background color when icon state is open -> called on menu icon click
@@ -41,7 +41,7 @@ export default function Header() {
         "background-color": "#2D2D2D",
         "icon-style": "carbon:close",
         "text-color": "#EEEEEE",
-        "dropdown-display":"initial"
+        "dropdown-display": "initial",
       });
     }
     // close dropdown -> change background to white and icon to vertical ellipse
@@ -50,7 +50,7 @@ export default function Header() {
         "background-color": "#f0f2f4",
         "icon-style": "carbon:overflow-menu-vertical",
         "text-color": "#000000",
-        "dropdown-display":"none"
+        "dropdown-display": "none",
       });
     }
   };
@@ -84,28 +84,91 @@ export default function Header() {
           left: 0,
           top: "68px",
           width: "100%",
+          zIndex: 1020
         }}
       >
-        <div className="header-dropdown-label" >
-        <h2 className="header-dropdown-title">PORTFOLIO</h2>
-        <Icon
-          icon="carbon:chevron-up"
-          style={{ width: "26px", height: "26px", margin: '0px 10px' }}
-        />
+        {/* portfolio dropdown */}
+        <div className="header-dropdown-label">
+          <h2 className="header-dropdown-title">PORTFOLIO</h2>
+          <Icon
+            icon="carbon:chevron-up"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
         </div>
-        <div className="header-dropdown-label" >
-        <h2 className="header-dropdown-title">ABOUT</h2>
-        <Icon
-          icon="carbon:arrow-right"
-          style={{ width: "26px", height: "26px", margin: '0px 10px' }}
-        />
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">Scanberry</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
         </div>
-        <div className="header-dropdown-label" >
-        <h2 className="header-dropdown-title">CONTACT</h2>
-        <Icon
-          icon="carbon:chevron-up"
-          style={{ width: "26px", height: "26px", margin: '0px 10px' }}
-        />
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">Galaxy trading cards</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">Hey Neighbor</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">CookBooker</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-label">
+          <h2 className="header-dropdown-title">ABOUT</h2>
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-label">
+          <h2 className="header-dropdown-title">CONTACT</h2>
+          <Icon
+            icon="carbon:chevron-up"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-portfolio-items">
+          <Icon
+            icon="carbon:email"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+          <h3 className="header-dropdown-portfolio-items-h3">Email</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-portfolio-items">
+          <Icon
+            icon="carbon:logo-linkedin"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+          <h3 className="header-dropdown-portfolio-items-h3">LinkedIn</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+        </div>
+        <div className="header-dropdown-portfolio-items">
+          <Icon
+            icon="carbon:logo-github"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
+          <h3 className="header-dropdown-portfolio-items-h3">GitHub profile</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+          />
         </div>
       </div>
       {/* displayed as none while i work on refactoring */}
