@@ -29,13 +29,9 @@ export default function Header() {
     "background-color": "#f0f2f4",
     "icon-style": "carbon:overflow-menu-vertical",
     "text-color": "#000000",
+    "dropdown-display":"none"
   });
-  // usestate for holding header background color between white (#f0f2f4) and dark gray (#2D2D2D)
-  const [headerBackgroundColor, setHeaderBackgroundColor] = useState("#f0f2f4");
-  // usestate for holding icon type to change between "ellipse" for open and "x" for close
-  const [headerNavIcon, setHeaderNavIcon] = useState(
-    "carbon:overflow-menu-vertical"
-  );
+
   // if/else function for changing background color when icon state is open -> called on menu icon click
   const handleMenuIconClick = () => {
     handleVisible();
@@ -45,9 +41,8 @@ export default function Header() {
         "background-color": "#2D2D2D",
         "icon-style": "carbon:close",
         "text-color": "#EEEEEE",
+        "dropdown-display":"initial"
       });
-      setHeaderBackgroundColor("#2D2D2D");
-      setHeaderNavIcon("carbon:close");
     }
     // close dropdown -> change background to white and icon to vertical ellipse
     if (isVisible === false) {
@@ -55,9 +50,8 @@ export default function Header() {
         "background-color": "#f0f2f4",
         "icon-style": "carbon:overflow-menu-vertical",
         "text-color": "#000000",
-      })
-      setHeaderBackgroundColor("#f0f2f4");
-      setHeaderNavIcon("carbon:overflow-menu-vertical");
+        "dropdown-display":"none"
+      });
     }
   };
   return (
@@ -65,15 +59,55 @@ export default function Header() {
       className="header-main"
       style={{ backgroundColor: headerFunctionality["background-color"] }}
     >
-      <h1 className="title" style={{color:headerFunctionality['text-color']}}>Robert Neyrinck</h1>
+      <h1
+        className="title"
+        style={{ color: headerFunctionality["text-color"] }}
+      >
+        Robert Neyrinck
+      </h1>
       <button style={{ border: "none", backgroundColor: "transparent" }}>
         <Icon
           icon={headerFunctionality["icon-style"]}
-          style={{color:headerFunctionality['text-color']}}
+          style={{ color: headerFunctionality["text-color"] }}
           className="menu-vertical"
           onClick={() => handleMenuIconClick()}
         />
       </button>
+      {/* dropdown section default display: none */}
+      <div
+        className="header-dropdown-sections"
+        style={{
+          display: headerFunctionality["dropdown-display"],
+          background: "#000000",
+          height: "68px",
+          position: "absolute",
+          left: 0,
+          top: "68px",
+          width: "100%",
+        }}
+      >
+        <div className="header-dropdown-label" >
+        <h2 className="header-dropdown-title">PORTFOLIO</h2>
+        <Icon
+          icon="carbon:chevron-up"
+          style={{ width: "26px", height: "26px", margin: '0px 10px' }}
+        />
+        </div>
+        <div className="header-dropdown-label" >
+        <h2 className="header-dropdown-title">ABOUT</h2>
+        <Icon
+          icon="carbon:arrow-right"
+          style={{ width: "26px", height: "26px", margin: '0px 10px' }}
+        />
+        </div>
+        <div className="header-dropdown-label" >
+        <h2 className="header-dropdown-title">CONTACT</h2>
+        <Icon
+          icon="carbon:chevron-up"
+          style={{ width: "26px", height: "26px", margin: '0px 10px' }}
+        />
+        </div>
+      </div>
       {/* displayed as none while i work on refactoring */}
       <Navbar
         collapseOnSelect
