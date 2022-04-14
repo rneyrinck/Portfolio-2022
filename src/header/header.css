@@ -46,6 +46,7 @@
   align-self: stretch;
   flex-grow: 0;
   margin: 0px 0px;
+  cursor: pointer;
 }
 .header-dropdown-title {
   flex: none;

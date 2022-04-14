@@ -32,44 +32,6 @@ export default function Header() {
     "dropdown-display": "none",
   });
   // usesstates for visibility of embedded dropdown menus 'PORTFOLIO' & 'CONTACT'
-  const [isPortfolioDropdownVisible, setIsPortfolioDropdownVisible] =
-    useState(false);
-  const [isContactDropdownVisible, setIsContactDropdownVisible] =
-    useState(false);
-  // handlers for embedded dropdown visibility
-  const handlePortfolioDropdownVisible = () => {
-    setIsPortfolioDropdownVisible(!isPortfolioDropdownVisible);
-  };
-  const handleContactDropdownVisible = () => {
-    setIsContactDropdownVisible(!isContactDropdownVisible);
-  };
-  // usestate for functionality of embedded dropdowns
-  const [embeddedDropdownFunctionality, setEmbeddedDropdownFunctionality] =
-    useState({
-      "portfolio-display": "none",
-      "portfolio-icon-style": "carbon:chevron-up",
-      "contact-display": "none",
-      "contact-icon-style": "carbon:chevron-up",
-    });
-  // handler for opening or closing
-  const handlePortfolioDropdownClick = () => {
-    // set display state as opposite of what it currently is(default false)
-    handlePortfolioDropdownClick()
-    // copy current state to preserve if other dropdown is open
-    let stateCopy = [...embeddedDropdownFunctionality]
-    // if/else for changing visibility of specific dropdown
-     // open dropdown -> change background to gray and icon to close "X"
-     if (isPortfolioDropdownVisible === true) {
-      stateCopy["portfolio-display"]='initial'
-      stateCopy["portfolio-icon-style"]="carbon:chevron-down"
-    }
-    // close dropdown -> change background to white and icon to vertical ellipse
-    if (isPortfolioDropdownVisible === false) {
-      stateCopy["portfolio-display"]='none'
-      stateCopy["portfolio-icon-style"]="carbon:chevron-up"
-  };
-  setEmbeddedDropdownFunctionality(stateCopy)
-}
   // if/else function for changing background color when icon state is open -> called on menu icon click
   const handleMenuIconClick = () => {
     handleVisible();
@@ -92,6 +54,70 @@ export default function Header() {
       });
     }
   };
+  const [isPortfolioDropdownVisible, setIsPortfolioDropdownVisible] =
+    useState(false);
+  const [isContactDropdownVisible, setIsContactDropdownVisible] =
+    useState(false);
+  // handlers for embedded dropdown visibility
+  const handlePortfolioDropdownVisible = () => {
+    setIsPortfolioDropdownVisible(!isPortfolioDropdownVisible);
+  };
+  const handleContactDropdownVisible = () => {
+    setIsContactDropdownVisible(!isContactDropdownVisible);
+  };
+  // usestate for functionality of embedded dropdowns
+  const [portfolioDropdownFunctionality, setPortfolioDropdownFunctionality] =
+    useState({
+      "portfolio-display": "none",
+      "portfolio-icon-style": "carbon:chevron-up",
+    });
+  const [contactDropdownFunctionality, setContactDropdownFunctionality] =
+    useState({
+      "contact-display": "none",
+      "contact-icon-style": "carbon:chevron-up",
+    });
+  // handler for opening or closing
+  const handlePortfolioDropdownClick = () => {
+    // set display state as opposite of what it currently is(default false)
+    handlePortfolioDropdownVisible();
+
+    // if/else for changing visibility of specific dropdown
+    // open dropdown -> change background to gray and icon to close "X"
+    if (isPortfolioDropdownVisible === true) {
+      setPortfolioDropdownFunctionality({
+        "portfolio-display": "initial",
+        "portfolio-icon-style": "carbon:chevron-down",
+      });
+    }
+    // close dropdown -> change background to white and icon to vertical ellipse
+    if (isPortfolioDropdownVisible === false) {
+      setPortfolioDropdownFunctionality({
+        "portfolio-display": "none",
+        "portfolio-icon-style": "carbon:chevron-up",
+      });
+    }
+  };
+  const handleContactDropdownClick = () => {
+    // set display state as opposite of what it currently is(default false)
+    handleContactDropdownVisible();
+
+    // if/else for changing visibility of specific dropdown
+    // open dropdown -> change background to gray and icon to close "X"
+    if (isContactDropdownVisible === true) {
+      setContactDropdownFunctionality({
+        "contact-display": "initial",
+        "contact-icon-style": "carbon:chevron-down",
+      });
+    }
+    // close dropdown -> change background to white and icon to vertical ellipse
+    if (isContactDropdownVisible === false) {
+      setContactDropdownFunctionality({
+        "contact-display": "none",
+        "contact-icon-style": "carbon:chevron-up",
+      });
+    }
+  };
+
   return (
     <header
       className="header-main"
@@ -108,7 +134,7 @@ export default function Header() {
           icon={headerFunctionality["icon-style"]}
           style={{ color: headerFunctionality["text-color"] }}
           className="menu-vertical"
-          onClick={() => handleMenuIconClick()}
+          onClick={handleMenuIconClick}
         />
       </button>
       {/* dropdown section default display: none */}
@@ -126,42 +152,52 @@ export default function Header() {
         }}
       >
         {/* portfolio dropdown */}
-        <div className="header-dropdown-label">
+        <div
+          className="header-dropdown-label"
+          onClick={handlePortfolioDropdownClick}
+        >
           <h2 className="header-dropdown-title">PORTFOLIO</h2>
           <Icon
-            icon="carbon:chevron-up"
+            icon={portfolioDropdownFunctionality["portfolio-icon-style"]}
             style={{ width: "26px", height: "26px", margin: "0px 10px" }}
           />
         </div>
-        <div className="header-dropdown-portfolio-items">
-          <h3 className="header-dropdown-portfolio-items-h3">Scanberry</h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        <div className="header-dropdown-portfolio-items">
-          <h3 className="header-dropdown-portfolio-items-h3">
-            Galaxy trading cards
-          </h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        <div className="header-dropdown-portfolio-items">
-          <h3 className="header-dropdown-portfolio-items-h3">Hey Neighbor</h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        <div className="header-dropdown-portfolio-items">
-          <h3 className="header-dropdown-portfolio-items-h3">CookBooker</h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
+        {/* wrapper div for portfolio dropdown display */}
+        <div
+          style={{
+            display: portfolioDropdownFunctionality["portfolio-display"],
+          }}
+        >
+          <div className="header-dropdown-portfolio-items">
+            <h3 className="header-dropdown-portfolio-items-h3">Scanberry</h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
+          <div className="header-dropdown-portfolio-items">
+            <h3 className="header-dropdown-portfolio-items-h3">
+              Galaxy trading cards
+            </h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
+          <div className="header-dropdown-portfolio-items">
+            <h3 className="header-dropdown-portfolio-items-h3">Hey Neighbor</h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
+          <div className="header-dropdown-portfolio-items">
+            <h3 className="header-dropdown-portfolio-items-h3">CookBooker</h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
         </div>
         <div className="header-dropdown-label">
           <h2 className="header-dropdown-title">ABOUT</h2>
@@ -170,45 +206,53 @@ export default function Header() {
             style={{ width: "26px", height: "26px", margin: "0px 10px" }}
           />
         </div>
-        <div className="header-dropdown-label">
+        <div className="header-dropdown-label" onClick={handleContactDropdownClick}>
           <h2 className="header-dropdown-title">CONTACT</h2>
           <Icon
-            icon="carbon:chevron-up"
+            icon={contactDropdownFunctionality["contact-icon-style"]}
             style={{ width: "26px", height: "26px", margin: "0px 10px" }}
           />
         </div>
-        <div className="header-dropdown-portfolio-items">
-          <Icon
-            icon="carbon:email"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-          <h3 className="header-dropdown-portfolio-items-h3">Email</h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        <div className="header-dropdown-portfolio-items">
-          <Icon
-            icon="carbon:logo-linkedin"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-          <h3 className="header-dropdown-portfolio-items-h3">LinkedIn</h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        <div className="header-dropdown-portfolio-items">
-          <Icon
-            icon="carbon:logo-github"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-          <h3 className="header-dropdown-portfolio-items-h3">GitHub profile</h3>{" "}
-          <Icon
-            icon="carbon:arrow-right"
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
+        <div
+          style={{
+            display: contactDropdownFunctionality["contact-display"],
+          }}
+        >
+          <div className="header-dropdown-portfolio-items">
+            <Icon
+              icon="carbon:email"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+            <h3 className="header-dropdown-portfolio-items-h3">Email</h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
+          <div className="header-dropdown-portfolio-items">
+            <Icon
+              icon="carbon:logo-linkedin"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+            <h3 className="header-dropdown-portfolio-items-h3">LinkedIn</h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
+          <div className="header-dropdown-portfolio-items">
+            <Icon
+              icon="carbon:logo-github"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+            <h3 className="header-dropdown-portfolio-items-h3">
+              GitHub profile
+            </h3>{" "}
+            <Icon
+              icon="carbon:arrow-right"
+              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+            />
+          </div>
         </div>
       </div>
       {/* displayed as none while i work on refactoring */}
