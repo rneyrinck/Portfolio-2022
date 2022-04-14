@@ -1,4 +1,4 @@
-.header-main {
+.header-main{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +7,7 @@
 
   height: 68px;
 
-  background: #f0f2f4;
+  /* background: #f0f2f4; */
 }
 .menu-vertical {
   width: 32px;

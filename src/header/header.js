@@ -12,7 +12,7 @@ import {
   Tab,
   Tabs,
 } from "react-bootstrap";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
@@ -24,14 +24,32 @@ export default function Header() {
   const handleVisible = () => {
     setIsVisible(!isVisible);
   };
-  const navigate = useNavigate()
-  const aboutNavigate = () => navigate('/about')
-  return (
-    <header className="header-main">
+// usestate for holding header background color between white (#f0f2f4) and dark gray (#2D2D2D)
+const [headerBackgroundColor, setHeaderBackgroundColor] = useState('#f0f2f4')
+// usestate for holding icon type to change between "ellipse" for open and "x" for close
+const [headerNavIcon, setHeaderNavIcon] = useState('carbon:overflow-menu-vertical')
+// if/else function for changing background color when icon state is open -> called on menu icon click
+const handleMenuIconClick = () => {
+  handleVisible()
+  // open dropdown -> change background to gray and icon to close "X"
+  if(isVisible===true){
+    setHeaderBackgroundColor('#2D2D2D')
+    setHeaderNavIcon('carbon:close')
+  }
+  // close dropdown -> change background to white and icon to vertical ellipse
+  if(isVisible===false){
+    setHeaderBackgroundColor('#f0f2f4')
+    setHeaderNavIcon('carbon:overflow-menu-vertical')
+  }
+}
+   return (
+    <header className="header-main" style={{backgroundColor: headerBackgroundColor}}>
       
       <h1 className="title">Robert Neyrinck</h1>
-      <Icon icon="carbon:overflow-menu-vertical" className="menu-vertical"/>
-      
+      <button style={{border: "none", backgroundColor: "transparent"}}>
+      <Icon icon={headerNavIcon} className="menu-vertical" onClick={()=>handleMenuIconClick()}/>
+     </button>
+     {/* displayed as none while i work on refactoring */}
     <Navbar
       collapseOnSelect
       expand="lg"
@@ -76,9 +94,9 @@ export default function Header() {
               </NavDropdown.Item>
         </Tab>
         
-        <Tab eventKey="about" title={<Link to="/about" style={{textDecoration: "none", linkStyle: "none", color: "#6c757d"}}>ABOUT</Link>}  onSelect={()=>aboutNavigate()}>
+        {/* <Tab eventKey="about" title={<Link to="/about" style={{textDecoration: "none", linkStyle: "none", color: "#6c757d"}}>ABOUT</Link>}  onSelect={()=>aboutNavigate()}> */}
        
-        </Tab>
+        {/* </Tab> */}
         <Tab eventKey="contact" title="CONTACT" >
         <NavDropdown.Item
                 href="mailto:robert.a.neyrinck@gmail.com?subject=Robert Neyrinck's Portfolio"
