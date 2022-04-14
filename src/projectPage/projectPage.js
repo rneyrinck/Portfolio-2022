@@ -18,8 +18,10 @@ export default function ProjectPage() {
       <div className="portfolio-wrapper">
         <h5>PORTFOLIO</h5>
       </div>
-      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
-        <Card style={{ border: "none", width: "375px" }}>
+      <div
+        style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
+      >
+        <Card style={{ border: "none", width: "375px" }} id="scanberry">
           <Card.Body
             style={{
               display: "flex",
@@ -38,8 +40,8 @@ export default function ProjectPage() {
               visualization. Built in 5 days after collaborative handoff with UX
               Designer.
             </Card.Text>
-            <ScreenShotModal/>
-            
+            <ScreenShotModal />
+
             <a href="https://github.com/rneyrinck/Scanberry" target="_blank">
               <Button variant="secondary">
                 Repo <BsArrowRight id="navbar-dropdown-arrows" />
@@ -47,7 +49,10 @@ export default function ProjectPage() {
             </a>
           </Card.Body>
         </Card>
-        <Card style={{ border: "none", width: "375px" }}>
+        <Card
+          style={{ border: "none", width: "375px" }}
+          id="galaxy-trading-cards"
+        >
           <Card.Body
             style={{
               display: "flex",
@@ -87,7 +92,7 @@ export default function ProjectPage() {
               textAlign: "left",
             }}
           >
-            <Card.Title>CookBooker</Card.Title>
+            <Card.Title id="cook-booker">CookBooker</Card.Title>
             <Card.Text>
               Full stack application built in 2-day sprint using MongoDB,
               express, and deployed on Heroku. Users can add their favorite
@@ -132,7 +137,7 @@ export default function ProjectPage() {
               textAlign: "left",
             }}
           >
-            <Card.Title>Hey, Neighbor</Card.Title>
+            <Card.Title id="hey-neighbor">Hey, Neighbor</Card.Title>
             <Card.Text>
               MERN stack application built collaboratively in 4-day sprint.
               Rotated project management role, resolved merge conflicts and

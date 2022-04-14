@@ -3,6 +3,7 @@ import Header from './header/header';
 import ProjectPage from './projectPage/projectPage.js';
 import { Route, Routes } from 'react-router';
 import About from './about/about';
+import Footer from './footer/footer';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
         </Routes>
       </main>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

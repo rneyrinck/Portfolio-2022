@@ -1,21 +1,24 @@
-#contact-dropdown-items{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 16px;
-    min-width: 300px;
+.header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 14px 14px;
+
+  height: 68px;
+
+  background: #f0f2f4;
 }
-#contact-dropdown-social-logos{
-    height: 30px;
-    width: 30px
+.menu-vertical {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 14px;
 }
-#navbar-dropdown-arrows{
-    height: 20px;
-    width: 20px;
-}
-#navbar-main-arrows{
-    height: 20px;
-    width: 20px;
-    color: #fff;
-    
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
 }

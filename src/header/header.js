@@ -9,76 +9,192 @@ import {
   Navbar,
   NavDropdown,
   Offcanvas,
+  Tab,
+  Tabs,
 } from "react-bootstrap";
+import { useNavigate } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
+import { Icon } from '@iconify/react';
 import "./header.css";
 export default function Header() {
+  const [isVisible, setIsVisible] = useState(false);
+  const handleVisible = () => {
+    setIsVisible(!isVisible);
+  };
+  const navigate = useNavigate()
+  const aboutNavigate = () => navigate('/about')
   return (
-    // <header>
-      <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark" >
-        <Container>
-          <Navbar.Brand href="#/">Robert Neyrinck</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
-            <Nav className="me-auto">
-                {/* portfoolio dropdown */}
-              <NavDropdown title="PORTFOLIO" id="responsive-nav-dropdown" >
-                <NavDropdown.Item href="/" id="contact-dropdown-items">
-                 <h5>Scanberry</h5> 
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" id="contact-dropdown-items">
-                 <h5>Galaxy trading cards</h5> 
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" id="contact-dropdown-items">
-                 <h5>Hey Neighbor</h5> 
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" id="contact-dropdown-items">
-                 <h5>CookBooker</h5> 
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#/about"><h5 style={{fontSize: 16, fontWeight: "420", marginTop: 5}}>ABOUT</h5></Nav.Link>
-              {/* contact dropdown */}
-              <NavDropdown title="CONTACT" id="basic-nav-dropdown">
-                <NavDropdown.Item
-                  href="#action/3.1"
-                  id="contact-dropdown-items"
-                >
-                  <AiOutlineMail id="contact-dropdown-social-logos"/>
-                  <h5>Email</h5>
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="https://www.linkedin.com/in/robert-neyrinck-5933a0104/"
-                  target="_blank"
-                  id="contact-dropdown-items"
-                >
-                  <AiFillLinkedin id="contact-dropdown-social-logos" />
-                  <h5>LinkedIn</h5>
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="#action/3.3"
-                  id="contact-dropdown-items"
-                >
-                  <AiFillGithub id="contact-dropdown-social-logos" /> <h5>GitHub profile</h5>
-                  <BsArrowRight id="navbar-dropdown-arrows"/>
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    // </header>
+    <header className="header-main">
+      
+      <h1 className="title">Robert Neyrinck</h1>
+      <Icon icon="carbon:overflow-menu-vertical" className="menu-vertical"/>
+      
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      variant="dark"
+      style={{ backgroundColor: "#2D2D2D", display: "none"}}
+    >
+      <Container>
+        <Navbar.Brand href="/" style={{}}>
+          Robert Neyrinck
+        </Navbar.Brand>
+      <Tabs
+        defaultActiveKey="profile"
+        id="uncontrolled-tab-example"
+        className="mb-3"
+        // style={{backgroundColor:"white"}}
+      >
+        <Tab eventKey="home" title="PORTFOLIO" >
+        <NavDropdown.Item href="/#scanberry" id="contact-dropdown-items">
+                <h5>Scanberry</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/#galaxy-trading-cards"
+                id="contact-dropdown-items"
+              >
+                <h5>Galaxy trading cards</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/#hey-neighbor"
+                id="contact-dropdown-items"
+              >
+                <h5>Hey Neighbor</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/#cook-booker"
+                id="contact-dropdown-items"
+              >
+                <h5>CookBooker</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+        </Tab>
+        
+        <Tab eventKey="about" title={<Link to="/about" style={{textDecoration: "none", linkStyle: "none", color: "#6c757d"}}>ABOUT</Link>}  onSelect={()=>aboutNavigate()}>
+       
+        </Tab>
+        <Tab eventKey="contact" title="CONTACT" >
+        <NavDropdown.Item
+                href="mailto:robert.a.neyrinck@gmail.com?subject=Robert Neyrinck's Portfolio"
+                id="contact-dropdown-items"
+              >
+                <AiOutlineMail id="contact-dropdown-social-logos" />
+                <h5>Email</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="https://www.linkedin.com/in/robert-neyrinck-5933a0104/"
+                target="_blank"
+                id="contact-dropdown-items"
+              >
+                <AiFillLinkedin id="contact-dropdown-social-logos" />
+                <h5>LinkedIn</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="https://github.com/rneyrinck"
+                target="_blank"
+                id="contact-dropdown-items"
+              >
+                <AiFillGithub id="contact-dropdown-social-logos" />{" "}
+                <h5>GitHub profile</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+        </Tab>
+      </Tabs>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          id="nav-hamburger"
+        />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+          style={{ alignItems: "left" }}
+        >
+          <Nav className="justify-content-end">
+            {/* portfoolio dropdown */}
+            <NavDropdown
+              title="PORTFOLIO"
+              align="end"
+              id="dropdown-menu-align-end"
+              autoClose="inside"
+            >
+              <NavDropdown.Item href="/#scanberry" id="contact-dropdown-items">
+                <h5>Scanberry</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/#galaxy-trading-cards"
+                id="contact-dropdown-items"
+              >
+                <h5>Galaxy trading cards</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/#hey-neighbor"
+                id="contact-dropdown-items"
+              >
+                <h5>Hey Neighbor</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="/#cook-booker"
+                id="contact-dropdown-items"
+              >
+                <h5>CookBooker</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+            </NavDropdown>
+            {/* about page link */}
+            <Nav.Link href="/about">
+              <h5 style={{ fontSize: 16, fontWeight: "420", marginTop: 5 }}>
+                ABOUT
+              </h5>
+            </Nav.Link>
+            {/* contact dropdown */}
+            <NavDropdown
+              title="CONTACT"
+              align="end"
+              id="dropdown-menu-align-end"
+              autoClose="inside"
+            >
+              <NavDropdown.Item
+                href="mailto:robert.a.neyrinck@gmail.com?subject=Robert Neyrinck's Portfolio"
+                id="contact-dropdown-items"
+              >
+                <AiOutlineMail id="contact-dropdown-social-logos" />
+                <h5>Email</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="https://www.linkedin.com/in/robert-neyrinck-5933a0104/"
+                target="_blank"
+                id="contact-dropdown-items"
+              >
+                <AiFillLinkedin id="contact-dropdown-social-logos" />
+                <h5>LinkedIn</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="https://github.com/rneyrinck"
+                target="_blank"
+                id="contact-dropdown-items"
+              >
+                <AiFillGithub id="contact-dropdown-social-logos" />{" "}
+                <h5>GitHub profile</h5>
+                <BsArrowRight id="navbar-dropdown-arrows" />
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    </header>
   );
 }
