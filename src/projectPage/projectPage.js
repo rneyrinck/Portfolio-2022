@@ -82,6 +82,39 @@ export default function ProjectPage() {
             </a>
           </Card.Body>
         </Card>
+              <Card style={{ border: "none", width: "375px" }}>
+                <Card.Body
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    margin: "16px",
+                    textAlign: "left",
+                  }}
+                >
+                  <Card.Title id="hey-neighbor">Hey, Neighbor</Card.Title>
+                  <Card.Text>
+                    MERN stack application built collaboratively in 4-day sprint.
+                    Rotated project management role, resolved merge conflicts and
+                    utilized GitHubs kanban to set and manage assignments. App allows
+                    users to create marketplace listings and communicate with
+                    comments.{" "}
+                  </Card.Text>
+                  <a
+                    href="https://sabr-ga.github.io/hey-neighbor-client/#/"
+                    target="_blank"
+                  >
+                    <Button variant="primary">
+                      Deployed Link <BsArrowRight id="navbar-dropdown-arrows" />
+                    </Button>
+                  </a>
+                  <a href="https://github.com/SABR-GA" target="_blank">
+                    <Button variant="secondary">
+                      Repo <BsArrowRight id="navbar-dropdown-arrows" />
+                    </Button>
+                  </a>
+                </Card.Body>
+              </Card>
         <Card style={{ border: "none", width: "375px" }}>
           <Card.Body
             style={{
@@ -123,39 +156,6 @@ export default function ProjectPage() {
               <Button variant="secondary" id="repo-button-cookbooker">
                 Repo Backend
                 <BsArrowRight id="navbar-dropdown-arrows" />
-              </Button>
-            </a>
-          </Card.Body>
-        </Card>
-        <Card style={{ border: "none", width: "375px" }}>
-          <Card.Body
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              flexDirection: "column",
-              margin: "16px",
-              textAlign: "left",
-            }}
-          >
-            <Card.Title id="hey-neighbor">Hey, Neighbor</Card.Title>
-            <Card.Text>
-              MERN stack application built collaboratively in 4-day sprint.
-              Rotated project management role, resolved merge conflicts and
-              utilized GitHubs kanban to set and manage assignments. App allows
-              users to create marketplace listings and communicate with
-              comments.{" "}
-            </Card.Text>
-            <a
-              href="https://sabr-ga.github.io/hey-neighbor-client/#/"
-              target="_blank"
-            >
-              <Button variant="primary">
-                Deployed Link <BsArrowRight id="navbar-dropdown-arrows" />
-              </Button>
-            </a>
-            <a href="https://github.com/SABR-GA" target="_blank">
-              <Button variant="secondary">
-                Repo <BsArrowRight id="navbar-dropdown-arrows" />
               </Button>
             </a>
           </Card.Body>
