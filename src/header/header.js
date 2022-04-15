@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   CloseButton,
@@ -53,7 +53,9 @@ export default function Header() {
         "dropdown-display": "none",
       });
     }
+    return;
   };
+
   const [isPortfolioDropdownVisible, setIsPortfolioDropdownVisible] =
     useState(false);
   const [isContactDropdownVisible, setIsContactDropdownVisible] =
@@ -76,6 +78,7 @@ export default function Header() {
       "contact-display": "none",
       "contact-icon-style": "carbon:chevron-up",
     });
+
   // handler for opening or closing
   const handlePortfolioDropdownClick = () => {
     // set display state as opposite of what it currently is(default false)
@@ -96,6 +99,7 @@ export default function Header() {
         "portfolio-icon-style": "carbon:chevron-up",
       });
     }
+    return;
   };
   const handleContactDropdownClick = () => {
     // set display state as opposite of what it currently is(default false)
@@ -116,8 +120,13 @@ export default function Header() {
         "contact-icon-style": "carbon:chevron-up",
       });
     }
+    return;
   };
-
+  useEffect(() => {
+    handleContactDropdownClick();
+    handlePortfolioDropdownClick();
+    handleMenuIconClick();
+  }, []);
   return (
     <header
       className="header-main"
@@ -206,7 +215,10 @@ export default function Header() {
             style={{ width: "26px", height: "26px", margin: "0px 10px" }}
           />
         </div>
-        <div className="header-dropdown-label" onClick={handleContactDropdownClick}>
+        <div
+          className="header-dropdown-label"
+          onClick={handleContactDropdownClick}
+        >
           <h2 className="header-dropdown-title">CONTACT</h2>
           <Icon
             icon={contactDropdownFunctionality["contact-icon-style"]}
