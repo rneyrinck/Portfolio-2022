@@ -1,3 +1,7 @@
+* {
+  font-family: "Inter";
+  font-style: normal;
+}
 .bio-wrapper {
   background-color: black;
   color: white;
@@ -13,17 +17,25 @@
   text-align: left;
 }
 div.card-title.h5 {
-  font-size: 24px;
+  font-size: 44px;
   font-weight: 380;
 }
 p.card-text {
-  font-size: 18;
+  font-weight: 400;
+font-size: 24px;
+line-height: 32px;
 }
 button.btn.btn-primary {
   margin-bottom: 10px;
   height: 55px;
   width: 183px;
   font-size: large;
+  background-color: #cfff69;
+  color: black;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
 button.btn.btn-secondary {
   margin-bottom: 10px;
@@ -32,7 +44,9 @@ button.btn.btn-secondary {
   background-color: #f0f2f4;
   color: black;
   border: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
 #repo-button-cookbooker {
   width: fit-content;
@@ -53,39 +67,38 @@ div.card-body {
 div.card {
   border: none;
 }
-.card-button-group{
-    display: flex;
-    flex-direction: column;
+.card-button-group {
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (min-width: 660px) {
   div.card-body {
     width: fit-content;
     align-self: center;
     display: grid;
-    grid-template-columns: .5fr 1fr 1fr 1fr .5fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr 1fr;
     margin: 20px;
 
     /* gap: 10px; */
   }
- 
+
   div.card-title.h5 {
     display: flex;
     justify-content: flex-end;
     grid-column: 1/3;
     grid-row: 1/3;
-    margin-right: 20px;
+    margin-right: 60px;
+    text-align: right;
   }
   p.card-text {
     grid-column: 3/5;
-    grid-row: 1/2
-  }
- 
-  .card-button-group{
-      grid-row: 2/3;
-      /* flex-direction: row; */
-      /* gap: 10px; */
+    grid-row: 1/2;
   }
 
-
+  .card-button-group {
+    grid-row: 2/3;
+    /* flex-direction: row; */
+    /* gap: 10px; */
+  }
 }
