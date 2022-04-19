@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {
-  Button,
-  CloseButton,
-  Container,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Offcanvas,
-  Tab,
-  Tabs,
-} from "react-bootstrap";
-import { useHref, useNavigate } from "react-router";
-import { LinkContainer } from "react-router-bootstrap";
-import { Link } from "react-router-dom";
-import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { BsArrowRight } from "react-icons/bs";
+
+import { useNavigate } from "react-router";
+
 import { Icon } from "@iconify/react";
 import "./header.css";
+import { Link } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
@@ -184,7 +170,7 @@ export default function Header() {
       }}
     >
       <a
-        href="/#scanberry"
+        href="/Portfolio-2022/#scanberry"
         onClick={handleMenuIconClick}
         style={{ textDecoration: "none", color: "#00000" }}
       >
@@ -205,7 +191,7 @@ export default function Header() {
         </div>
       </a>
       <a
-        href="/#galaxy-trading-cards"
+        href="/Portfolio-2022/#galaxy-trading-cards"
         onClick={handleMenuIconClick}
         style={{ textDecoration: "none", color: "#00000" }}
       >
@@ -226,7 +212,7 @@ export default function Header() {
         </div>
       </a>
       <a
-        href="/#hey-neighbor"
+        href="/Portfolio-2022/#hey-neighbor"
         onClick={handleMenuIconClick}
         style={{ textDecoration: "none", color: "#00000" }}
       >
@@ -247,7 +233,7 @@ export default function Header() {
         </div>
       </a>
       <a
-        href="/#cook-booker"
+        href="/Portfolio-2022/#cook-booker"
         onClick={handleMenuIconClick}
         style={{ textDecoration: "none", color: "#00000" }}
       >
@@ -269,8 +255,8 @@ export default function Header() {
       </a>
     </div>
     {/* about page link */}
-    <a
-      href="/about"
+    <Link
+      to="/about"
       onClick={handleMenuIconClick}
       style={{ textDecoration: "none", color: "#00000" }}
     >
@@ -281,7 +267,7 @@ export default function Header() {
           style={{ width: "26px", height: "26px", margin: "0px 10px" }}
         />
       </div>
-    </a>
+    </Link>
     {/* wrapper div for contact dropdown display */}
     <div
       className="header-dropdown-label"

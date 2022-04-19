@@ -105,58 +105,47 @@ img {
 }
 .bio-button-group {
   display: none;
-  
 }
-#contact-dropdown-social-logos{
+#contact-dropdown-social-logos {
   height: 32px;
   width: 32px;
-  /* align-self: center; */
 }
-#about-button-group-buttons h6{
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-margin-top: 4px;
-
-color: #000000;
-
-}
-#about-button-group-linkedIn-button h6{
-  display: flex;
- 
-  font-family: 'Inter';
+#about-button-group-buttons h6 {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height */
   margin-top: 4px;
 
-  
   color: #000000;
-  
 }
-#about-button-dropdown-arrows{
+#about-button-group-linkedIn-button h6 {
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 4px;
+  color: #000000;
+}
+#about-button-dropdown-arrows {
   width: 21px;
   height: 27px;
   font-weight: 500;
-font-size: 22px;
-margin-top: 1px;
+  font-size: 22px;
+  margin-top: 1px;
 }
 @media only screen and (min-width: 660px) {
   .about-wrapper {
     display: none;
   }
   .about-main {
-    /* display: grid; */
     justify-content: center;
   }
   .about-bio-and-picture {
     display: grid;
-  
     width: 100vw;
   }
   #about-button-grou-sm-breakpoint {
@@ -177,7 +166,6 @@ margin-top: 1px;
   .about-skills-and-languages {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 60px;
     background: #000000;
@@ -186,14 +174,11 @@ margin-top: 1px;
     align-self: stretch;
     flex-grow: 0;
     margin: 0px 0px;
-    color: #B8B8B8;
-    /* height: 400px; */
-    /* overflow: hidden; */
+    color: #b8b8b8;
   }
   .about-skills-and-languages-content {
     display: flex;
     flex-direction: row;
-    /* align-items: flex-start; */
     justify-content: center;
     padding: 0px;
     flex: none;
@@ -201,10 +186,9 @@ margin-top: 1px;
     align-self: stretch;
     flex-grow: 0;
     margin: 10px 0px;
-    /* height: 300px; */
-    min-height: 80%
+    min-height: 80%;
   }
-  .languages{
+  .languages {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -214,10 +198,10 @@ margin-top: 1px;
     flex-grow: 0;
     margin: 0px 60px;
   }
-  .languages-ul{
-    padding-left:0
+  .languages-ul {
+    padding-left: 0;
   }
-  .tools{
+  .tools {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -228,25 +212,18 @@ margin-top: 1px;
     flex-grow: 0;
     margin: 0px 60px;
   }
-  .tools-h6{
-    /* width: 100%; */
-  }
-  .tools-ul{
+  .tools-ul {
     text-align: left;
     list-style: none;
-    padding-left:0;
-    /* white-space: pre-wrap; */
+    padding-left: 0;
     display: flex;
     flex-direction: column;
-    /* height: 100%; */
-    /* flex-wrap: wrap; */
-    overflow:clip;
+    overflow: clip;
   }
-  .tools li{
-      margin-right: 100px;
+  .tools li {
+    margin-right: 100px;
   }
-  .tools-ul2{
-    /* grid-row: 2/3; */
+  .tools-ul2 {
     margin-top: -15px;
   }
 }
@@ -262,18 +239,17 @@ margin-top: 1px;
   #about-button-group-linkedIn-button {
     align-items: center;
   }
-  .tools{
-    
+  .tools {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 24px 1fr ;
+    grid-template-rows: 24px 1fr;
     overflow: hidden;
   }
-  .tools-ul{
+  .tools-ul {
     grid-row: 2/3;
     margin-top: 5px;
   }
-  .tools-ul2{
+  .tools-ul2 {
     grid-row: 2/3;
     margin-top: 5px;
   }

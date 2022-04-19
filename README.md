@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Robert Neyrinck Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Hi!
 
-## Available Scripts
+    I'm Robert Neyrinck, previously a technology salesman, purpetually a gamer, and, currently, transitioning to a career as a full-stack software engineer.
 
-In the project directory, you can run:
+    This is my (newest) portfolios Readme file, and in it I'll cover what technologies were used, what the design process looked like, and any issues that I ran into.
 
-### `npm start`
+    Thanks for taking the time!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Best,
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Robert
 
-### `npm test`
+## [Deployed Link](https://rneyrinck.github.io/Portfolio-2022/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Contents
+- Description of the portfolio 
+    * Describes the design/development of the project 
+- Technology Used
+    * Lists languages/frameworks used in the project
+- Site Map
+    * Table displaying the URL routes for navigation
+- React Components
+    * Table displaying react components and their functions
+- Wireframes
+    * Images of the wireframes used in designing the project
 
-### `npm run build`
+## Description of the portfolio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This is the third rendition of my portfolio, and first project post-bootcamp(General Assembly's Software engineering immersive). The app is built with react and, where bootstrap styling lined up with the UI, react-bootstrap for a majority of the styling. Some elements (the custom header with chanigng color on click) were custom coded to allow for a more unique look than the built in bootstrap components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+My partner is a product designer and I've had the good luck to be able to work with them on some of my projects. They designed mobile first wireframes in figma and passed it along to me for development. I'm happy with how it came out as the general layout will be much more scaleable than my previous portfolio(and it looks alot nicer!).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I appreciate you taking the time to look over my work, and look forward to any notes you may have on either my organization or code!
 
-### `npm run eject`
+#### Technology Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- HTML, CSS, Javascript
+- React
+- React Hooks, Components, and State
+- React Bootstrap
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Site Map
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+|         Route          |                    Result                    |
+| :--------------------: | :------------------------------------------: |
+|           /            | Portfolio page displaying different projects |
+|      /#scanberry       |       Anchor link to Scanberry Project       |
+| /#galaxy-trading-cards | Anchor link to Galaxy Trading Cards Project  |
+|     /#hey-neighbor     |     Anchor link to Hey, Neighbor Project     |
+|     /#cook-booker      |      Anchor link to CookBooker Project       |
+|         /about         |                  About page                  |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## React Components
+|Component|Description|
+|:---:|:---:|
+| About | Contains brief bio, list of skills/languages, and a flattering pic-o-bob |
+| Footer | Simple wrapper/footer with a link to google doc file of my resume |
+| Header | Custom JS/CSS for a dropdown navbar with embedded dropdowns with links to social media profiles and contact info as well as links to the project page |
+| ProjectPage | Contains list of all personal projects |
+| ModalSlideShow | Project page modal embedded slideshow to display screenshots of the Scanberry project | 
+| ScreenShotModal | Container component for modal slideshow | 
+| App | Renders pages |
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Wireframes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Menu Component
 
-### Code Splitting
+![wireframe of menu component](./ReadMeImages/Menu.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Portfolio Page Component
 
-### Analyzing the Bundle Size
+![wireframe of Portfolio Page component](./ReadMeImages/Portfolio.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### About Page Component
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![wireframe of About Page component](./ReadMeImages/About.png)

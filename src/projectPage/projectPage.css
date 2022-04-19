@@ -22,8 +22,8 @@ div.card-title.h5 {
 }
 p.card-text {
   font-weight: 400;
-font-size: 24px;
-line-height: 32px;
+  font-size: 24px;
+  line-height: 32px;
 }
 button.btn.btn-primary {
   margin-bottom: 10px;
@@ -80,8 +80,6 @@ div.card {
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr 200px;
     margin: 20px;
-
-    /* gap: 10px; */
   }
 
   div.card-title.h5 {
@@ -99,7 +97,5 @@ div.card {
 
   .card-button-group {
     grid-row: 2/3;
-    /* flex-direction: row; */
-    /* gap: 10px; */
   }
 }

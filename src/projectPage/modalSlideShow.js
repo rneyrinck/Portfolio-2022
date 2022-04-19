@@ -8,9 +8,9 @@ import Tutorial4 from "./../ScreenShots/Tutorial4.jpg";
 import Tutorial5 from "./../ScreenShots/Tutorial5.jpg";
 import SpendingGoalPage from "./../ScreenShots/SpendingGoalPage.jpg";
 import PreSelectSpendingGoal from "./../ScreenShots/PreSelectSpendingGoal.jpg";
-import CustomSpendingGoal from './../ScreenShots/CustomSpendingGoal.jpg'
-import ScanningItem from "./../ScreenShots/ScanningItem.jpg" 
-import ShoppingCart from "./../ScreenShots/ShoppingCart.jpg" 
+import CustomSpendingGoal from "./../ScreenShots/CustomSpendingGoal.jpg";
+import ScanningItem from "./../ScreenShots/ScanningItem.jpg";
+import ShoppingCart from "./../ScreenShots/ShoppingCart.jpg";
 export default function ModalSlideShow() {
   return (
     <Carousel id="carousel">
@@ -30,13 +30,25 @@ export default function ModalSlideShow() {
         <img className="d-block w-100" src={Tutorial5} alt="Fifth slide" />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={SpendingGoalPage} alt="Fifth slide" />
+        <img
+          className="d-block w-100"
+          src={SpendingGoalPage}
+          alt="Fifth slide"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={PreSelectSpendingGoal} alt="Fifth slide" />
+        <img
+          className="d-block w-100"
+          src={PreSelectSpendingGoal}
+          alt="Fifth slide"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={CustomSpendingGoal} alt="Fifth slide" />
+        <img
+          className="d-block w-100"
+          src={CustomSpendingGoal}
+          alt="Fifth slide"
+        />
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={ScanningItem} alt="Fifth slide" />

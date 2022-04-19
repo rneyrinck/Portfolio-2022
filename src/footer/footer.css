@@ -1,29 +1,18 @@
-#resume-button{
-    /* margin-bottom: 10px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 18px;
-    
-    position: static;
-    width: 100vw;
-    height: 60px;
-    /* left: 0px;
-    top: 1816px; */
-    color: #000000;
-    background: #F0F2F4;
-    border: none;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 22px;
-    /* Inside auto layout */
-    
-    /* flex: none;
-    order: 5;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 0px 0px; */
+#resume-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 18px;
+  position: static;
+  width: 100vw;
+  height: 60px;
+  color: #000000;
+  background: #f0f2f4;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
 }

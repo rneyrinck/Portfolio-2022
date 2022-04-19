@@ -1,8 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { BsArrowRight } from "react-icons/bs";
-
-import { Link } from "react-router-dom";
 import "./projectPage.css";
 import ScreenShotModal from "./screenShotModal";
 export default function ProjectPage() {
@@ -31,7 +29,7 @@ export default function ProjectPage() {
               Designer.
             </Card.Text>
             <div className="card-button-group">
-            <ScreenShotModal />
+              <ScreenShotModal />
               <a href="https://github.com/rneyrinck/Scanberry" target="_blank">
                 <Button variant="secondary">
                   Repo <BsArrowRight id="navbar-dropdown-arrows" />
@@ -95,10 +93,11 @@ export default function ProjectPage() {
           <Card.Body>
             <Card.Title id="cook-booker">Cook Booker</Card.Title>
             <Card.Text>
-              Full stack application built in 2-day sprint with a backend composed of MongoDB,
-              express, and deployed on Heroku. On the frontend users can add their favorite
-              cookbooks and authors to a public forum on frontend React.Js
-              platform styled using minimal components from React Bootstrap. {" "}
+              Full stack application built in 2-day sprint with a backend
+              composed of MongoDB, express, and deployed on Heroku. On the
+              frontend users can add their favorite cookbooks and authors to a
+              public forum on frontend React.Js platform styled using minimal
+              components from React Bootstrap.{" "}
             </Card.Text>
             <div className="card-button-group">
               <a

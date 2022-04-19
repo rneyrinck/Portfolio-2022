@@ -1,22 +1,21 @@
-import './App.css';
-import Header from './header/header';
-import ProjectPage from './projectPage/projectPage.js';
-import { Route, Routes } from 'react-router';
-import About from './about/about';
-import Footer from './footer/footer';
+import "./App.css";
+import Header from "./header/header";
+import ProjectPage from "./projectPage/projectPage.js";
+import { Route, Routes } from "react-router";
+import About from "./about/about";
+import Footer from "./footer/footer";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <main>
-        
         <Routes>
-          <Route path="/" element={<ProjectPage/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/" element={<ProjectPage />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* padding: 22px 14px 14px; */
   min-height: 68px;
   background: #f0f2f4;
   flex: none;
@@ -59,7 +58,6 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-
   color: #f0f2f4;
   position: static;
   left: 25px;
@@ -78,10 +76,7 @@
   align-items: center;
   padding: 25px;
   background-color: #f0f2f4;
- 
-
   height: 72px;
-
   flex: none;
   order: 2;
   align-self: stretch;
@@ -94,15 +89,12 @@
 }
 .header-dropdown-portfolio-items-h3 {
   position: static;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
-
   color: #000000;
-
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -110,7 +102,6 @@
 }
 div#header-dropdown-sections.header-dropdown-sections {
   background-color: #ffffff;
-  /* background: "#000000"; */
   height: "68px";
   position: "absolute";
   left: 0;
@@ -120,7 +111,6 @@ div#header-dropdown-sections.header-dropdown-sections {
 }
 
 .large-header-sections {
-  
   position: static;
   display: flex;
   flex-direction: row;
@@ -146,7 +136,6 @@ div#header-dropdown-sections.header-dropdown-sections {
   top: 0;
 }
 .large-header-dropdown-title {
-  
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -164,24 +153,18 @@ div#header-dropdown-sections.header-dropdown-sections {
   background-color: #f0f2f4;
 }
 
-.large-header-dropdown-label:hover{
-  /* background-color: #1e1e1e; */
-  
-}
-.large-header-contact-dropdown{
+.large-header-contact-dropdown {
   display: flex;
   flex-direction: row;
   gap: 0px;
-  /* margin-top: 20%; */
   margin-top: 34px;
   width: 100%;
   position: absolute;
   left: 0;
 }
-.large-header-portfolio-dropdown{
+.large-header-portfolio-dropdown {
   display: flex;
   flex-direction: row;
-  /* gap: -1px; */
   margin-top: 34px;
   width: 100%;
   position: absolute;
@@ -191,56 +174,39 @@ div#header-dropdown-sections.header-dropdown-sections {
 
 .large-header-dropdown-portfolio-items {
   display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 36px;
-
-position: static;
-
-left: 0px;
-top: 0px;
-
-background: #2D2D36;
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 1;
-margin: 0px 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 36px;
+  position: static;
+  left: 0px;
+  top: 0px;
+  background: #2d2d36;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  margin: 0px 0px;
 }
 .large-header-dropdown-portfolio-items:hover {
   background-color: rgb(179, 179, 179);
 }
 .large-header-dropdown-portfolio-items-h3 {
-  /* position:absolute; */
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
-
   color: #000000;
-
   flex: none;
   order: 0;
   flex-grow: 0;
   margin: 0px 10px;
 }
-.larger-header-icons{
-  /* position: static; */
-width: 32px;
-height: 32px;
-/* left: 163.5px;
-top: 36px; */
+.larger-header-icons {
+  width: 32px;
+  height: 32px;
 
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-/* margin: 0px 22px; */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
