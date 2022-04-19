@@ -40,7 +40,7 @@ export default function ProjectPage() {
         </Card>
         <Card id="galaxy-trading-cards">
           <Card.Body>
-            <Card.Title>Galaxy trading cards</Card.Title>
+            <Card.Title>Galaxy Cards</Card.Title>
             <Card.Text>
               Multi-page react app using React Bootstrap, HashRouter, and an API
               by NASA displaying images, videos and descriptive content. Created

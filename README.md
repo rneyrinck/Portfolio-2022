@@ -6,7 +6,7 @@
 
     This is my (newest) portfolios Readme file, and in it I'll cover what technologies were used, what the design process looked like, and any issues that I ran into.
 
-    Thanks for taking the time!
+    Thanks for taking the time, and please take a look at the site below!
 
     Best,
 
@@ -34,12 +34,26 @@ My partner is a product designer and I've had the good luck to be able to work w
 
 I appreciate you taking the time to look over my work, and look forward to any notes you may have on either my organization or code!
 
-#### Technology Used
+## Technology Used
 
-- HTML, CSS, Javascript
-- React
-- React Hooks, Components, and State
-- React Bootstrap
+### HTML, CSS, Javascript
+- #### Hyper Text Markup Language 
+    * HTML is a W3C offical web standard language to generate the "bones" of webpages(paragraphs, lists, links to other pages etc.)
+- #### Cascading Style Sheets
+    * CSS is a language used to style HTML
+- #### Javascript
+    * Javascript is language used for creating dynamic web content. 
+
+### React, Hooks, and Components
+- #### React
+    * React is a Javascript library created by Facebook. It contains reusable Javascript code for creating user interfaces. 
+    * It uses JSX which is a Javascript syntax extension mainly used to embed HTML.
+- #### React Hooks
+    * React Hooks are a feature released in React version 16.8 that simplified writing an application in React
+    * Hooks allow developers to reuse their code more efficiently, have more flexibility with where they access functional logic in their app, and have better composition of their codebase
+ Components, and State
+
+### React Bootstrap
 
 ## Site Map
 
