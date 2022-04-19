@@ -93,7 +93,7 @@ export default function ProjectPage() {
         </Card>
         <Card>
           <Card.Body>
-            <Card.Title id="cook-booker">CookBooker</Card.Title>
+            <Card.Title id="cook-booker">Cook Booker</Card.Title>
             <Card.Text>
               Full stack application built in 2-day sprint with a backend composed of MongoDB,
               express, and deployed on Heroku. On the frontend users can add their favorite

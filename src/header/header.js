@@ -123,241 +123,268 @@ export default function Header() {
     }
     return;
   };
-  // useeffect to ensure single click render
+
+
+  // useeffect to ensure single click render of header dropdowns
   useEffect(() => {
     handleContactDropdownClick();
     handlePortfolioDropdownClick();
+   
     handleMenuIconClick();
   }, []);
-  return (
-    <header
-      className="header-main"
-      style={{ backgroundColor: headerFunctionality["background-color"] }}
+  return <header
+  className="header-main"
+  style={{ backgroundColor: headerFunctionality["background-color"] }}
+>
+  <h1
+    className="title"
+    style={{ color: headerFunctionality["text-color"] }}
+    onClick={() => navigate("/")}
+  >
+    Robert Neyrinck
+  </h1>
+  <button style={{ border: "none", backgroundColor: "transparent" }}>
+    <Icon
+      icon={headerFunctionality["icon-style"]}
+      style={{ color: headerFunctionality["text-color"] }}
+      className="menu-vertical"
+      onClick={handleMenuIconClick}
+    />
+  </button>
+  {/* dropdown section default display: none */}
+  <div
+    className="header-dropdown-sections"
+    id="header-dropdown-sections"
+    style={{
+      display: headerFunctionality["dropdown-display"],
+      background: "#000000",
+      height: "68px",
+      position: "absolute",
+      left: 0,
+      top: "68px",
+      width: "100%",
+      zIndex: 1020,
+    }}
+  >
+    {/* portfolio dropdown */}
+    <div
+      className="header-dropdown-label"
+      onClick={handlePortfolioDropdownClick}
     >
-      <h1
-        className="title"
-        style={{ color: headerFunctionality["text-color"] }}
-        onClick={() => navigate("/")}
+      <h2 className="header-dropdown-title">PORTFOLIO</h2>
+      <Icon
+        icon={portfolioDropdownFunctionality["portfolio-icon-style"]}
+        style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+      />
+    </div>
+    {/* wrapper div for portfolio dropdown display */}
+    <div
+      style={{
+        display: portfolioDropdownFunctionality["portfolio-display"],
+      }}
+    >
+      <a
+        href="/#scanberry"
+        onClick={handleMenuIconClick}
+        style={{ textDecoration: "none", color: "#00000" }}
       >
-        Robert Neyrinck
-      </h1>
-      <button style={{ border: "none", backgroundColor: "transparent" }}>
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">
+            Scanberry
+          </h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              textDecoration: "none",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+      <a
+        href="/#galaxy-trading-cards"
+        onClick={handleMenuIconClick}
+        style={{ textDecoration: "none", color: "#00000" }}
+      >
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">
+            Galaxy trading cards
+          </h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              textDecoration: "none",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+      <a
+        href="/#hey-neighbor"
+        onClick={handleMenuIconClick}
+        style={{ textDecoration: "none", color: "#00000" }}
+      >
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">
+            Hey Neighbor
+          </h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              textDecoration: "none",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+      <a
+        href="/#cook-booker"
+        onClick={handleMenuIconClick}
+        style={{ textDecoration: "none", color: "#00000" }}
+      >
+        <div className="header-dropdown-portfolio-items">
+          <h3 className="header-dropdown-portfolio-items-h3">
+            CookBooker
+          </h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              textDecoration: "none",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+    </div>
+    {/* about page link */}
+    <a
+      href="/about"
+      onClick={handleMenuIconClick}
+      style={{ textDecoration: "none", color: "#00000" }}
+    >
+      <div className="header-dropdown-label">
+        <h2 className="header-dropdown-title">ABOUT</h2>
         <Icon
-          icon={headerFunctionality["icon-style"]}
-          style={{ color: headerFunctionality["text-color"] }}
-          className="menu-vertical"
-          onClick={handleMenuIconClick}
+          icon="carbon:arrow-right"
+          style={{ width: "26px", height: "26px", margin: "0px 10px" }}
         />
-      </button>
-      {/* dropdown section default display: none */}
-      <div
-        className="header-dropdown-sections"
-        style={{
-          display: headerFunctionality["dropdown-display"],
-          background: "#000000",
-          height: "68px",
-          position: "absolute",
-          left: 0,
-          top: "68px",
-          width: "100%",
-          zIndex: 1020,
-        }}
-      >
-        {/* portfolio dropdown */}
-        <div
-          className="header-dropdown-label"
-          onClick={handlePortfolioDropdownClick}
-        >
-          <h2 className="header-dropdown-title">PORTFOLIO</h2>
-          <Icon
-            icon={portfolioDropdownFunctionality["portfolio-icon-style"]}
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        {/* wrapper div for portfolio dropdown display */}
-        <div
-          style={{
-            display: portfolioDropdownFunctionality["portfolio-display"],
-          }}
-        >
-          <a
-            href="/#scanberry"
-            onClick={handleMenuIconClick}
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-            <div className="header-dropdown-portfolio-items">
-              <h3 className="header-dropdown-portfolio-items-h3">Scanberry</h3>{" "}
-              <Icon
-                icon="carbon:arrow-right"
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  margin: "0px 10px",
-                  textDecoration: "none",
-                  color: "#000000",
-                }}
-              />
-            </div>
-          </a>
-          <a
-            href="/#galaxy-trading-cards"
-            onClick={handleMenuIconClick}
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-            <div className="header-dropdown-portfolio-items">
-              <h3 className="header-dropdown-portfolio-items-h3">
-                Galaxy trading cards
-              </h3>{" "}
-              <Icon
-                icon="carbon:arrow-right"
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  margin: "0px 10px",
-                  textDecoration: "none",
-                  color: "#000000",
-                }}
-              />
-            </div>
-          </a>
-          <a
-            href="/#hey-neighbor"
-            onClick={handleMenuIconClick}
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-            <div className="header-dropdown-portfolio-items">
-              <h3 className="header-dropdown-portfolio-items-h3">
-                Hey Neighbor
-              </h3>{" "}
-              <Icon
-                icon="carbon:arrow-right"
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  margin: "0px 10px",
-                  textDecoration: "none",
-                  color: "#000000",
-                }}
-              />
-            </div>
-          </a>
-          <a
-            href="/#cook-booker"
-            onClick={handleMenuIconClick}
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-            <div className="header-dropdown-portfolio-items">
-              <h3 className="header-dropdown-portfolio-items-h3">CookBooker</h3>{" "}
-              <Icon
-                icon="carbon:arrow-right"
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  margin: "0px 10px",
-                  textDecoration: "none",
-                  color: "#000000",
-                }}
-              />
-            </div>
-          </a>
-        </div>
-        {/* about page link */}
-        <a
-          href="/about"
-          onClick={handleMenuIconClick}
-          style={{ textDecoration: "none", color: "#00000" }}
-        >
-          <div className="header-dropdown-label">
-            <h2 className="header-dropdown-title">ABOUT</h2>
-            <Icon
-              icon="carbon:arrow-right"
-              style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-            />
-          </div>
-        </a>
-        {/* wrapper div for contact dropdown display */}
-        <div
-          className="header-dropdown-label"
-          onClick={handleContactDropdownClick}
-        >
-          <h2 className="header-dropdown-title">CONTACT</h2>
-          <Icon
-            icon={contactDropdownFunctionality["contact-icon-style"]}
-            style={{ width: "26px", height: "26px", margin: "0px 10px" }}
-          />
-        </div>
-        <div
-          style={{
-            display: contactDropdownFunctionality["contact-display"],
-          }}
-        >
-          <a
-            href="mailto:robert.a.neyrinck@gmail.com?subject=Robert Neyrinck's Portfolio"
-            target="_blank"
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-            <div className="header-dropdown-portfolio-items">
-              <Icon
-                icon="carbon:email"
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  margin: "0px 10px",
-                  color: "#000000",
-                }}
-              />
-              <h3 className="header-dropdown-portfolio-items-h3">Email</h3>{" "}
-              <Icon
-                icon="carbon:arrow-right"
-                style={{
-                  width: "26px",
-                  height: "26px",
-                  margin: "0px 10px",
-                  color: "#000000",
-                }}
-              />
-            </div>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/robert-neyrinck-5933a0104/"
-            target="_blank"
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-            <div className="header-dropdown-portfolio-items">
-              <Icon
-                icon="carbon:logo-linkedin"
-                style={{ width: "26px", height: "26px", margin: "0px 10px", color: "#000000" }}
-              />
-              <h3 className="header-dropdown-portfolio-items-h3">LinkedIn</h3>{" "}
-              <Icon
-                icon="carbon:arrow-right"
-                style={{ width: "26px", height: "26px", margin: "0px 10px", color: "#000000" }}
-              />
-            </div>
-          </a>
-          <a
-            href="https://github.com/rneyrinck"
-            target="_blank"
-            style={{ textDecoration: "none", color: "#00000" }}
-          >
-          <div className="header-dropdown-portfolio-items">
-            <Icon
-              icon="carbon:logo-github"
-              style={{ width: "26px", height: "26px", margin: "0px 10px", color: "#000000" }}
-            />
-            <h3 className="header-dropdown-portfolio-items-h3">
-              GitHub profile
-            </h3>{" "}
-            <Icon
-              icon="carbon:arrow-right"
-              style={{ width: "26px", height: "26px", margin: "0px 10px", color: "#000000" }}
-            />
-          </div>
-          </a>
-        </div>
       </div>
-      {/* displayed as none while i work on refactoring */}
-    
-    </header>
-  );
+    </a>
+    {/* wrapper div for contact dropdown display */}
+    <div
+      className="header-dropdown-label"
+      onClick={handleContactDropdownClick}
+    >
+      <h2 className="header-dropdown-title">CONTACT</h2>
+      <Icon
+        icon={contactDropdownFunctionality["contact-icon-style"]}
+        style={{ width: "26px", height: "26px", margin: "0px 10px" }}
+      />
+    </div>
+    <div
+      style={{
+        display: contactDropdownFunctionality["contact-display"],
+      }}
+    >
+      <a
+        href="mailto:robert.a.neyrinck@gmail.com?subject=Robert Neyrinck's Portfolio"
+        target="_blank"
+        style={{ textDecoration: "none", color: "#00000" }}
+      >
+        <div className="header-dropdown-portfolio-items">
+          <Icon
+            icon="carbon:email"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              color: "#000000",
+            }}
+          />
+          <h3 className="header-dropdown-portfolio-items-h3">Email</h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/robert-neyrinck-5933a0104/"
+        target="_blank"
+        style={{ textDecoration: "none", color: "#00000" }}
+      >
+        <div className="header-dropdown-portfolio-items">
+          <Icon
+            icon="carbon:logo-linkedin"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              color: "#000000",
+            }}
+          />
+          <h3 className="header-dropdown-portfolio-items-h3">
+            LinkedIn
+          </h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+      <a
+        href="https://github.com/rneyrinck"
+        target="_blank"
+        style={{ textDecoration: "none", color: "#00000" }}
+      >
+        <div className="header-dropdown-portfolio-items">
+          <Icon
+            icon="carbon:logo-github"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              color: "#000000",
+            }}
+          />
+          <h3 className="header-dropdown-portfolio-items-h3">
+            GitHub profile
+          </h3>{" "}
+          <Icon
+            icon="carbon:arrow-right"
+            style={{
+              width: "26px",
+              height: "26px",
+              margin: "0px 10px",
+              color: "#000000",
+            }}
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+  {/* displayed as none while i work on refactoring */}
+</header>
 }
