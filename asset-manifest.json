@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Portfolio-2022/static/css/main.5a743785.css",
+    "main.js": "/Portfolio-2022/static/js/main.d1c9dc19.js",
+    "static/media/picOBob.png": "/Portfolio-2022/static/media/picOBob.0deceddcd3ec93b6677f.png",
+    "static/media/ScanningItem.jpg": "/Portfolio-2022/static/media/ScanningItem.37b8d0b0ca90b062ce59.jpg",
+    "static/media/ShoppingCart.jpg": "/Portfolio-2022/static/media/ShoppingCart.35c3da3cd771a45386b0.jpg",
+    "static/media/Tutorial3.jpg": "/Portfolio-2022/static/media/Tutorial3.191a195d031bbcd9c755.jpg",
+    "static/media/Tutorial4.jpg": "/Portfolio-2022/static/media/Tutorial4.c6914bcb0c866a0ba39a.jpg",
+    "static/media/SpendingGoalPage.jpg": "/Portfolio-2022/static/media/SpendingGoalPage.f50c72b737c6b7ed9bd0.jpg",
+    "static/media/CustomSpendingGoal.jpg": "/Portfolio-2022/static/media/CustomSpendingGoal.c54551c36dbb7d9e08e7.jpg",
+    "static/media/PreSelectSpendingGoal.jpg": "/Portfolio-2022/static/media/PreSelectSpendingGoal.2da59575f3dd2aee27ae.jpg",
+    "static/media/Tutorial2.jpg": "/Portfolio-2022/static/media/Tutorial2.a6f6b865ec2721992248.jpg",
+    "static/media/Tutorial1.jpg": "/Portfolio-2022/static/media/Tutorial1.6fd1506a8680f137073d.jpg",
+    "static/media/Tutorial5.jpg": "/Portfolio-2022/static/media/Tutorial5.6eeede228b7aae358e8d.jpg",
+    "index.html": "/Portfolio-2022/index.html",
+    "main.5a743785.css.map": "/Portfolio-2022/static/css/main.5a743785.css.map",
+    "main.d1c9dc19.js.map": "/Portfolio-2022/static/js/main.d1c9dc19.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a743785.css",
+    "static/js/main.d1c9dc19.js"
+  ]
+}
