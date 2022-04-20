@@ -14,7 +14,7 @@ export default function Header() {
   // usestate containing all functionality changes made to header  -> changed using index i.e (headerFunctionality[0]='changed')
   const [headerFunctionality, setHeaderFunctionality] = useState({
     "background-color": "#f0f2f4",
-    "icon-style": "carbon:overflow-menu-vertical",
+    "icon-style": "carbon:menu",
     "text-color": "#000000",
     "dropdown-display": "none",
   });
@@ -35,7 +35,7 @@ export default function Header() {
     if (isVisible === false) {
       setHeaderFunctionality({
         "background-color": "#f0f2f4",
-        "icon-style": "carbon:overflow-menu-vertical",
+        "icon-style": "carbon:menu",
         "text-color": "#000000",
         "dropdown-display": "none",
       });

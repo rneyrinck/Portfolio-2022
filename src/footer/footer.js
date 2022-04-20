@@ -9,7 +9,7 @@ export default function Footer() {
       <Button
         href={'https://docs.google.com/document/d/e/2PACX-1vRBuLyNWGQICCWL3bFy38xvM_w3LCVIqhXQN8AUHtApB7rAgW8fSAIa6wz-kY3lvZrO67DPuAZnharF/pub'}
         target="_blank"
-        
+        download
         id="resume-button"
       >
         Check out my Resume <BsArrowRight style={{marginLeft: 5}}/>

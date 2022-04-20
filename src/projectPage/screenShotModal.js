@@ -14,18 +14,18 @@ const ScreenShotModal = () => {
         Screen Shots <BsArrowRight id="navbar-dropdown-arrows" />
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} >
         <Modal.Header closeButton>
           <Modal.Title>Scanberry Screen Shots</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ display: "flex", justifyContent: "center" }}>
           <ModalSlideShow />
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

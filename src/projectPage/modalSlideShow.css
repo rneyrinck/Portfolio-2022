@@ -1,6 +1,10 @@
 #carousel {
   width: 300px;
+  height: 80vh;
   display: flex;
   align-self: center;
   color: black;
+}
+.d-block{
+  width: 80px;
 }

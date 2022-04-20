@@ -11,7 +11,7 @@
   line-height: 40px;
   align-items: flex-end;
   padding: 25px;
-  height: 300px;
+  height: 225px;
   text-align: left;
 }
 .portfolio-wrapper {
@@ -25,7 +25,7 @@ div.card-title.h5 {
   font-size: 32px;
   font-weight: 380;
   justify-self: flex-start;
-  word-break:break-all;
+  /* word-break:break-all; */
   text-align: left;
 }
 p.card-text {
@@ -66,13 +66,14 @@ button.btn.btn-secondary {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 div.card-body {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin: 16px;
-  padding: 0;
+  /* margin: 16px; */
+  padding: 16px;
   text-align: left;
 }
 div.card {
@@ -91,7 +92,7 @@ div.card {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr 200px;
-    margin: 20px;
+    /* margin-left: 30px; */
   }
 
   div.card-title.h5 {
@@ -99,15 +100,23 @@ div.card {
     justify-content: flex-end;
     grid-column: 1/3;
     grid-row: 1/3;
-    margin-right: 60px;
+    /* margin-left: 20%; */
     text-align: right;
+    margin-right: 20px;
+    /* padding-left: 5vw; */
   }
   p.card-text {
     grid-column: 3/5;
     grid-row: 1/2;
+
   }
 
   .card-button-group {
     grid-row: 2/3;
+  }
+}
+@media only screen and (min-width: 800px) {
+  div.card-title.h5{
+    padding-left: 10vw
   }
 }

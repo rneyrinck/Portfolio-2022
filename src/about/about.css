@@ -143,10 +143,15 @@ img {
   }
   .about-main {
     justify-content: center;
+   
   }
   .about-bio-and-picture {
     display: grid;
     width: 100vw;
+    
+    align-content: center;
+    padding: 60px;
+
   }
   #about-button-grou-sm-breakpoint {
     display: none;
@@ -155,7 +160,8 @@ img {
     display: contents;
   }
   .pic-o-bob {
-    width: 50vw;
+    width: 45vw;
+    max-width: 500px;
     grid-row: 1/2;
   }
   div.about-bio {
