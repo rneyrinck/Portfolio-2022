@@ -17,6 +17,26 @@ export default function ProjectPage() {
         <h5>PORTFOLIO</h5>
       </div>
       <div className="portfolio-projects-section">
+        <Card id="youtubeclone">
+          <Card.Body>
+            <Card.Title>Youtube Clone</Card.Title>
+            <Card.Text>
+              React application built following a JS Mastery tutorial. Replicates Youtube functionality utilizing RapidAPIs Youtube v3 API for content and user ability to search for videos. Application is built with Material UI for styling and structure. 
+            </Card.Text>
+            <div className="card-button-group">
+              <a href="https://rneyrinck.github.io/youtubeclone/" target="_blank">
+                <Button variant="primary">
+                  Deployed Link <BsArrowRight id="navbar-dropdown-arrows" />
+                </Button>
+              </a>
+              <a href="https://github.com/rneyrinck/youtubeclone" target="_blank">
+                <Button variant="secondary">
+                  Repo <BsArrowRight id="navbar-dropdown-arrows" />
+                </Button>
+              </a>
+            </div>
+          </Card.Body>
+        </Card>
         <Card id="scanberry">
           <Card.Body>
             <Card.Title>Scanberry</Card.Title>
