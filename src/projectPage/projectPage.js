@@ -17,19 +17,59 @@ export default function ProjectPage() {
         <h5>PORTFOLIO</h5>
       </div>
       <div className="portfolio-projects-section">
-        <Card id="youtubeclone">
+        <Card id="reactdashboard">
           <Card.Body>
-            <Card.Title>Youtube Clone</Card.Title>
+            <Card.Title>React Dashboard</Card.Title>
             <Card.Text>
-              React application built following a JS Mastery tutorial. Replicates Youtube functionality utilizing RapidAPIs Youtube v3 API for content and user ability to search for videos. Application is built with Material UI for styling and structure. 
+              JS Mastery tutorial react dashboard. App designed to showcase the
+              third party component library SyncFusion and push to the limits
+              the libraries ability to visualize data. Includes a fully
+              functioning calendar, kanban, and multiple tables with search,
+              sort, and edit capabilities. Uses Material UI
+              for styling and structure.
             </Card.Text>
             <div className="card-button-group">
-              <a href="https://rneyrinck.github.io/youtubeclone/" target="_blank">
+              <a
+                href="https://rneyrinck.github.io/reactdashboard/"
+                target="_blank"
+              >
                 <Button variant="primary">
                   Deployed Link <BsArrowRight id="navbar-dropdown-arrows" />
                 </Button>
               </a>
-              <a href="https://github.com/rneyrinck/youtubeclone" target="_blank">
+              <a
+                href="https://github.com/rneyrinck/reactdashboard"
+                target="_blank"
+              >
+                <Button variant="secondary">
+                  Repo <BsArrowRight id="navbar-dropdown-arrows" />
+                </Button>
+              </a>
+            </div>
+          </Card.Body>
+        </Card>
+        <Card id="youtubeclone">
+          <Card.Body>
+            <Card.Title>Youtube Clone</Card.Title>
+            <Card.Text>
+              React application built following a JS Mastery tutorial.
+              Replicates Youtube functionality utilizing RapidAPIs Youtube v3
+              API for content and user ability to search for videos. Application
+              is built with Material UI for styling and structure.
+            </Card.Text>
+            <div className="card-button-group">
+              <a
+                href="https://rneyrinck.github.io/youtubeclone/"
+                target="_blank"
+              >
+                <Button variant="primary">
+                  Deployed Link <BsArrowRight id="navbar-dropdown-arrows" />
+                </Button>
+              </a>
+              <a
+                href="https://github.com/rneyrinck/youtubeclone"
+                target="_blank"
+              >
                 <Button variant="secondary">
                   Repo <BsArrowRight id="navbar-dropdown-arrows" />
                 </Button>
